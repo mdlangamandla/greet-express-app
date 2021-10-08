@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/simple-grid.css">
+    <script src="/clientSide.js" ></script>
+</head>
+<body> 
+    <div class="center">
+    <header> 
+        GREETING APPLICATION
+    </header>
+</div>
+<br>
+<div class="container">
+    <div class="center">
+        <div class="theerror">
+            <div class="errorMes">
+                <div class="error-entry">
+                    <h4 style="color: rgb(153, 12, 38);" class="flashError"></h4>
+                </div>
+                <div class="success-entry">
+                    <h4 style="color: rgb(8, 9, 8);" class="flashSuccess"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/name" method="POST">
+        <div class="row">
+            <div class="center">
+                <span class="input"><label class="name">Name:</label><input type="text" name="name" value="" placeholder="Enter here" class="nameInput"></span>
+                <span class="counter"> <label>counter:</label> <span class="counting">0</span></span>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="center">     
+                 <label class="isixhosa" id="rad"><input type="radio" name="radioGreet" value="isixhosa" class="langInput">Isixhosa</label>    
+                 <label class="english" id="rad"><input type="radio" name="radioGreet" value="english" class="langInput">English</label>
+                 <label class="portuguese" id="rad"><input type="radio" name="radioGreet" value="portuguese" class="langInput">Portuguese</label>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="center">
+                <button class="greetButton" id="butt" type="submit">Greet Me</button> 
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="row">
+        <div class="center">
+            <a href="/clear"><button class="clearButton" id="butt" >Clear Count</button></a>
+            <a href="/greetings"><button class="names" id="butt">Names Greeted</button></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="center">
+            <div class="thgreet">
+                <span class="greeting"></span><span class="nameOutput"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
