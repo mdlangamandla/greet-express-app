@@ -54,13 +54,13 @@ describe('Greetings SQL queries', function () {
     it("The counter should not increase if a language is not selected.",async ()=>{
         let servicesFactory = await ServicesFactory(pool);
         await servicesFactory.addUserOrUpdate("","Dlangamandla");
-        assert.equal(1,true,await servicesFactory.all());
+        assert.equal(1,true,await servicesFactory.counter());
     })
 
     it('It should greet Lamla once and return the size of the array equal to one.', async ()=> {
         let servicesFactory = await ServicesFactory(pool);
         await servicesFactory.addUserOrUpdate("isixhosa","Lamla");
-        assert.equal(1,true, await servicesFactory.all());
+        assert.equal(1,true, await servicesFactory.counter());
     })
 
 
@@ -68,7 +68,7 @@ describe('Greetings SQL queries', function () {
         let servicesFactory = await ServicesFactory(pool);
         await servicesFactory.addUserOrUpdate("portuguese","Sisa");
         await servicesFactory.addUserOrUpdate("portuguese","Sisa");
-        assert.equal(1,true,await servicesFactory.all());
+        assert.equal(1,true,await servicesFactory.counter());
         
     })
 
