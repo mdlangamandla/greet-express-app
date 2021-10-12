@@ -1,6 +1,6 @@
 
 module.exports = function ServicesFactory(pool) {
-    async function all() {
+    async function counter() {
         try {
             let all_ = await pool.query('select * from users');
             return all_.rows.length;
@@ -102,7 +102,7 @@ module.exports = function ServicesFactory(pool) {
         }
     }
     return {
-        all,
+        counter,
         addUserOrUpdate,
         themNames,
         themGreets,
