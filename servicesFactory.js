@@ -11,37 +11,7 @@ module.exports = function ServicesFactory(pool) {
             TypeError.captureStackTrace
         }
     }
-    async function themNames() {
-        try {
-            let thempar_ = await pool.query("select names from users")
-            let thempar = thempar_.rows
-            let someArr = []
-            for (var i in thempar) {
-                someArr.push(Object.values(thempar[i]))
-                someArr = someArr.flat()
-            }
 
-            return someArr
-
-        } catch (error) {
-            console.error(error)
-        }
-    }
-    async function themGreets() {
-        try {
-            let themGreets__ = await pool.query("select greet_counter from users");
-            let themGreets_ = themGreets__.rows;
-            let someArr = [];
-            for (var i in themGreets_) {
-                someArr.push(Object.values(themGreets_[i]));
-                someArr = someArr.flat();
-            }
-            return someArr;
-        } catch (error) {
-            console.error(Error.captureStackTrace)
-        } finally {
-        }
-    }
     function testError(par1, par2) {
         if (par1 === undefined || par1 === "") {
             return "Oops, no name entered."
