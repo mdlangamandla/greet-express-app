@@ -74,8 +74,6 @@ module.exports = function ServicesFactory(pool) {
     return {
         counter,
         addUserOrUpdate,
-        themNames,
-        themGreets,
         getCurrentName,
         sqlReset,
         testError
